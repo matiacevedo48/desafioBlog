@@ -1,0 +1,22 @@
+<h1>LISTADO DE TODOS LOS ARTICULOS</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">TITLE</th>
+      <th scope="col">IMAGE URL</th>
+      <th scope="col">CONTENT</th>
+      <th scope="col">CREATED AT</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @posts.each do |post| %>
+    <tr>
+        <td><%= post.title %></td>
+        <td><%= post.image_url %></td>
+        <td><%= post.content %></td>
+        <td><%= post.created_at %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
